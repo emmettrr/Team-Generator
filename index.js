@@ -113,3 +113,36 @@ addEmployee = () => {
       }
     });
 };
+
+init = () => {
+  return inquirer
+    .prompt([
+      {
+        type: "input",
+        message: "Who is the team's Manager?",
+        name: "name",
+      },
+      {
+        type: "input",
+        message: "Manager's employee ID:",
+        name: "id",
+      },
+      {
+        type: "input",
+        message: "Manager's email address:",
+        name: "email",
+      },
+      {
+        type: "input",
+        message: "Manager's office number:",
+        name: "officeNumber",
+      },
+    ])
+    .then((managerResults) => {
+      manager.role = "Manager";
+      const { name, id, email, officeNumber, role } = managerResults;
+      const newManager = new Manager(name, email, officeNumber, role);
+      employee.push(newManager);
+      employeeType();
+    });
+};
