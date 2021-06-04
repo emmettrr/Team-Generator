@@ -4,10 +4,10 @@ const path = require("path");
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/html");
-const manager = require("./lib/manager");
+const Manager = require("./lib/manager");
 const employee = require("./lib/employee");
-const intern = require("./lib/intern");
-const engineer = require("./lib/engineer");
+const Intern = require("./lib/intern");
+const Engineer = require("./lib/engineer");
 const employees = [];
 
 employeeType = () => {
@@ -139,10 +139,10 @@ init = () => {
       },
     ])
     .then((managerResults) => {
-      manager.role = "Manager";
+      managerResults.role = "Manager";
       const { name, id, email, officeNumber, role } = managerResults;
-      const newManager = new Manager(name, email, officeNumber, role);
-      employee.push(newManager);
+      const newManager = new Manager(name, id, email, officeNumber, role);
+      employees.push(newManager);
       employeeType();
     });
 };
@@ -153,7 +153,7 @@ renderHtml = () => {
     if (err) {
       return console.log(err);
     } else {
-      return console.log("Team HTML file created in OUTPUT folder!");
+      return console.log("Html file created in output folder!");
     }
   });
 };
