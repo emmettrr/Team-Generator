@@ -19,5 +19,8 @@
   "dependencies": {
     "inquirer": "^8.1.0",
     "path": "^0.12.7"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }
