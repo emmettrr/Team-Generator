@@ -106,7 +106,7 @@ addEmployee = () => {
       if (choice.add === "yes") {
         employeeType();
       } else {
-        render();
+        renderHtml();
       }
     });
 };
