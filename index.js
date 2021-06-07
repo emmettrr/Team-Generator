@@ -11,7 +11,8 @@ const employees = [];
 
 employeeType = () => {
   console.log("What is the employee's role?");
-  return inquirer.prompt([
+  return inquirer
+    .prompt([
       {
         type: "list",
         message: "What is the Employee's role?",
@@ -29,7 +30,8 @@ employeeType = () => {
 };
 
 addEngineer = () => {
-  return inquirer.prompt([
+  return inquirer
+    .prompt([
       {
         type: "input",
         message: "What is the Engineer's name?",
@@ -54,7 +56,6 @@ addEngineer = () => {
     .then((engineerResults) => {
       engineerResults.role = "Engineer";
       const { name, id, email, github, role } = engineerResults;
-      console.log(name, "hello")
       const newEngineer = new Engineer(name, id, email, github, role);
       employees.push(newEngineer);
       addEmployee();
@@ -62,7 +63,8 @@ addEngineer = () => {
 };
 
 addIntern = () => {
-  return inquirer.prompt([
+  return inquirer
+    .prompt([
       {
         type: "input",
         message: "What is the Intern's name?",
@@ -94,16 +96,17 @@ addIntern = () => {
 };
 
 addEmployee = () => {
-  return inquirer.prompt([
+  return inquirer
+    .prompt([
       {
         type: "list",
         message: "Add another team member?",
+        name: "add",
         choices: ["Yes", "No"],
-        name: "another"
       },
     ])
     .then((choice) => {
-      if (choice.add === "yes") {
+      if (choice.add === "Yes") {
         employeeType();
       } else {
         renderHtml();
@@ -112,7 +115,8 @@ addEmployee = () => {
 };
 
 init = () => {
-  return inquirer.prompt([
+  return inquirer
+    .prompt([
       {
         type: "input",
         message: "Who is the team's Manager?",
