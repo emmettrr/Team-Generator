@@ -41,6 +41,14 @@ addEngineer = () => {
         type: "input",
         message: "Engineer's employee ID:",
         name: "id",
+        validate: nameInput => {
+          if (isNaN(nameInput)) {
+              console.log ("please enter a valid id number")
+              return false;
+          } else {
+              return true;
+          }
+      }
       },
       {
         type: "input",
@@ -74,6 +82,14 @@ addIntern = () => {
         type: "input",
         message: "Intern's employee ID:",
         name: "id",
+        validate: nameInput => {
+          if (isNaN(nameInput)) {
+              console.log ("please enter a valid id number")
+              return false;
+          } else {
+              return true;
+          }
+      }
       },
       {
         type: "input",
@@ -126,6 +142,14 @@ init = () => {
         type: "input",
         message: "Manager's employee ID:",
         name: "id",
+        validate: nameInput => {
+          if (isNaN(nameInput)) {
+              console.log ("Please enter a valid ID number")
+              return false;
+          } else {
+              return true;
+          }
+      }
       },
       {
         type: "input",
@@ -136,6 +160,14 @@ init = () => {
         type: "input",
         message: "Manager's office number:",
         name: "officeNumber",
+        validate: nameInput => {
+          if (isNaN(nameInput)) {
+              console.log ("please enter a valid office number")
+              return false;
+          } else {
+              return true;
+          }
+      }
       },
     ])
     .then((managerResults) => {
