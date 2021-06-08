@@ -25,7 +25,7 @@
 
 
   ## Installation
-  `npm init, node index.js`
+  `npm init, npm i, node index.js`
   <br>
 
   ## Usage
