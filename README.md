@@ -38,6 +38,9 @@
   This application is covered by the GNU license. 
   <br>
 
+  ## Screenshot
+  ![Screenshot](./img/screenshot.png)
+
   ## Contributing
   Emmett
   <br>
