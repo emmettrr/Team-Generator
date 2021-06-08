@@ -29,7 +29,7 @@
   <br>
 
   ## Usage
-  To generate a team of Manager's, intern's and engineers.
+  To generate a team of Managers, Intern's and Engineers.
   <br>
 
   ## License
@@ -39,7 +39,7 @@
   <br>
 
   ## Contributing
-  emmett
+  Emmett
   <br>
 
   ## Tests
